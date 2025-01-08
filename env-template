@@ -1,1 +1,5 @@
 # copy this file to .env and add tokens as listed
+
+# Bluesky
+BLUESKY_USERNAME=
+BLUESKY_PASSWORD=
