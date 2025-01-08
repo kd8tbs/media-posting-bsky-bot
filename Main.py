@@ -11,9 +11,11 @@ def main():
     profile = client.login(username, password)
     print('Welcome,', profile.display_name)
 
-    text = client_utils.TextBuilder().text('Hello World from ').link('Python SDK', 'https://atproto.blue')
-    post = client.send_post(text)
-    client.like(post.uri, post.cid)
+    while True:
+        user_input = input('Enter your post (or type "exit" to quit): ')
+        if user_input.lower() == 'exit':
+            break
+        post = client.send_post(user_input)
     
     
 if __name__ == '__main__':
